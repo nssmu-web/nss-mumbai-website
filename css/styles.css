@@ -1,0 +1,370 @@
+:root {
+    --nss-blue: #1e3b70;
+    --nss-red: #d32f2f;
+    --nss-light-bg: #f5f5f5;
+    --nss-border: #e0e0e0;
+    --nss-dark-text: #222222;
+}
+
+body {
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: var(--nss-dark-text);
+    line-height: 1.6;
+}
+* {
+    overflow-anchor: none;
+}
+
+#app-header {
+    min-height: 270px;
+}
+@media (max-width: 768px) {
+    #app-header {
+        min-height: 120px;
+    }
+}
+
+/* Accessibility: High Contrast Mode */
+body.high-contrast,
+body.high-contrast * {
+    background-color: #000000 !important;
+    color: #ffff00 !important;
+    border-color: #ffff00 !important;
+}
+body.high-contrast img {
+    filter: none !important;
+    background-color: transparent !important;
+}
+
+/* Skip to Content */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px;
+    z-index: 10000;
+    transition: top 0.2s;
+}
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* Top Bar (Govt Style) */
+.top-bar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.8rem;
+    padding: 4px 0;
+}
+
+.top-bar-links a {
+    color: #333;
+    text-decoration: none;
+    padding: 0 8px;
+    border-right: 1px solid #ccc;
+    display: inline-block;
+}
+.top-bar-links a:last-child {
+    border-right: none;
+}
+.accessibility-controls span {
+    cursor: pointer;
+    margin: 0 4px;
+    font-weight: bold;
+    user-select: none;
+}
+.accessibility-controls span:hover {
+    color: var(--nss-blue);
+}
+
+/* Colorful Social Icons */
+.icon-facebook { color: #1877F2; }
+.icon-twitter { color: #000000; }
+.icon-instagram {
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.icon-youtube { color: #FF0000; }
+
+/* Similar Organisations */
+.similar-orgs-container {
+    background-color: var(--nss-blue);
+    border-top: none;
+    padding: 20px 0;
+}
+.org-logo-img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Main Header */
+.main-header {
+    background-color: #ffffff;
+    padding: 15px 0;
+}
+.header-text h3 {
+    font-size: 1.1rem;
+    color: var(--nss-blue);
+    margin-bottom: 2px;
+}
+.header-text h1 {
+    font-size: 1.6rem;
+    color: var(--nss-dark-text);
+    font-weight: 700;
+    margin-bottom: 2px;
+    letter-spacing: -0.5px;
+}
+.header-text h2 {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0;
+}
+.header-logos img {
+    max-height: 80px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: var(--nss-blue);
+    padding: 0;
+    border-bottom: 4px solid var(--nss-red);
+}
+.navbar-nav .nav-item {
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 12px 20px !important;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-link.active {
+    background-color: var(--nss-red);
+    color: #ffffff !important;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    border-radius: 0;
+    border: none;
+    border-top: 3px solid var(--nss-red);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 0;
+}
+.dropdown-item {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-bottom: 1px solid #eee;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: var(--nss-light-bg);
+    color: var(--nss-blue);
+}
+
+/* Breadcrumb */
+.breadcrumb-wrapper {
+    background-color: #f1f1f1;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+.breadcrumb {
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.breadcrumb-item a {
+    color: var(--nss-blue);
+    text-decoration: none;
+}
+.breadcrumb-item.active {
+    color: #666;
+}
+
+/* Sidebar Navigation (Govt Style) */
+.sidebar-wrapper {
+    background-color: var(--nss-blue);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.sidebar-menu .list-group-item {
+    background-color: var(--nss-blue);
+    color: #ffffff;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0;
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+.sidebar-menu .list-group-item:last-child {
+    border-bottom: none;
+}
+.sidebar-menu .list-group-item:hover,
+.sidebar-menu .list-group-item:focus {
+    background-color: rgba(255,255,255,0.1);
+    color: #ffffff;
+    padding-left: 25px;
+}
+.sidebar-menu .list-group-item.active {
+    background-color: var(--nss-red);
+    color: #ffffff;
+    border-color: var(--nss-red);
+}
+
+/* Page Content */
+.page-title {
+    color: var(--nss-blue);
+    border-bottom: 2px solid var(--nss-red);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+.page-body h2, .page-body h3 {
+    color: var(--nss-blue);
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+.page-body h2 { font-size: 1.4rem; }
+.page-body h3 { font-size: 1.2rem; }
+.page-body p, .page-body li {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Homepage Specifics */
+.hero-carousel .carousel-item {
+    height: 450px;
+    background-color: #000;
+}
+.hero-carousel .carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+}
+
+/* Content Boxes (News, Events, Leadership) */
+.content-box {
+    border: 1px solid var(--nss-border);
+    background: #fff;
+    height: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.content-box-header {
+    background-color: var(--nss-blue);
+    color: white;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.content-box-header.bg-yellow {
+    background-color: #fbc02d;
+    color: var(--nss-dark-text);
+}
+.content-box-body {
+    padding: 0;
+    height: 300px;
+    overflow-y: auto;
+}
+.list-item-bordered {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+.list-item-bordered:last-child {
+    border-bottom: none;
+}
+.list-item-bordered a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+}
+.list-item-bordered a:hover {
+    color: var(--nss-red);
+}
+.date-badge {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--nss-red);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+/* Site Map Styling */
+.sitemap-list, .sitemap-list ul {
+    list-style-type: circle;
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+.sitemap-list li {
+    margin-bottom: 10px;
+}
+.sitemap-list ul {
+    margin-top: 10px;
+}
+.sitemap-list a, .sitemap-list span {
+    color: #2b3990;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+.sitemap-list a:hover {
+    text-decoration: underline;
+}
+
+/* Similar Organizations */
+.similar-orgs-strip {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 30px 0;
+}
+.org-logo {
+    max-height: 70px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+.org-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    background-color: var(--nss-blue);
+    color: #fff;
+    border-top: 5px solid var(--nss-red);
+}
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.footer-bottom {
+    background-color: #112240;
+    padding: 15px 0;
+    font-size: 0.85rem;
+    color: #aaa;
+}
