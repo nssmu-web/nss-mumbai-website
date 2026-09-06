@@ -126,6 +126,8 @@ const appHeader = `
                 <li class="nav-item"><a class="nav-link" data-nav-target="resources" href="resources.html">Resources & Forms</a></li>
                 <li class="nav-item"><a class="nav-link" data-nav-target="circulars" href="circulars.html">Circulars</a></li>
                 <li class="nav-item"><a class="nav-link" data-nav-target="gallery" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" data-nav-target="nss-volunteers" href="#">NSS Volunteers</a></li>
+                <li class="nav-item"><a class="nav-link" data-nav-target="newsletter" href="#">Newsletter</a></li>
                 <li class="nav-item"><a class="nav-link" data-nav-target="contact" href="contact.html">Contact Us</a></li>
             </ul>
         </div>
@@ -549,6 +551,8 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <a href="resources.html" class="list-group-item list-group-item-action ${pageId === 'resources' ? 'active' : ''}">Resources & Forms</a>
                                     <a href="circulars.html" class="list-group-item list-group-item-action ${pageId === 'circulars' ? 'active' : ''}">Circulars</a>
                                     <a href="gallery.html" class="list-group-item list-group-item-action ${pageId === 'gallery' ? 'active' : ''}">Photo Gallery</a>
+                                    <a href="#" class="list-group-item list-group-item-action ${pageId === 'nss-volunteers' ? 'active' : ''}">NSS Volunteers</a>
+                                    <a href="#" class="list-group-item list-group-item-action ${pageId === 'newsletter' ? 'active' : ''}">Newsletter</a>
                                     <a href="sitemap.html" class="list-group-item list-group-item-action ${pageId === 'sitemap' ? 'active' : ''}">Site Map</a>
                                 </div>
                             </div>
