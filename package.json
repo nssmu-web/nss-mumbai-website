@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "mkdir -p dist && cp -r *.html css js images dist/",
-    "preview": "vite preview"
+    "dev": "vite --port 3000 --host 0.0.0.0",
+    "build": "mkdir -p dist && cp -r *.html *.pdf css js images dist/",
+    "preview": "vite preview --port 3000 --host 0.0.0.0"
   },
   "devDependencies": {
     "vite": "^5.0.0"
