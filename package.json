@@ -1,0 +1,14 @@
+{
+  "name": "nss-mu",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "mkdir -p dist && cp -r *.html css js images dist/",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

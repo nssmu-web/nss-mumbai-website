@@ -1,0 +1,6 @@
+{
+  "name": "NSS Mumbai University",
+  "description": "National Service Scheme (NSS) website for Mumbai University.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
